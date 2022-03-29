@@ -11,3 +11,8 @@ jobs:
       
       - name: Run a one-line script
         run: echo Hello, world!
+      
+      - name: Custom action
+        uses: lfraile-migration-accreditation/custom-action@v1.1
+        with:
+          who-to-greet: 'Sanofi trainees'
