@@ -13,6 +13,6 @@ jobs:
         run: echo Hello, world!
       
       - name: Custom action
-        uses: lfraile-migration-accreditation/custom-action@v1.1
+        uses: lfraile-migration-accreditation/custom-action@v1.2
         with:
           who-to-greet: 'Sanofi trainees'
