@@ -17,7 +17,7 @@ jobs:
         id: custom-action
         uses: lfraile-migration-accreditation/custom-action@v1.2
         with:
-          who-to-greet: 'Sanofi trainees'
+          who-to-greet: 'Shell trainees'
       
       - name: Show output
         run: echo ${{ steps.custom-action.outputs.time }}
