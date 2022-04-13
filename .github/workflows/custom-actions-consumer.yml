@@ -20,4 +20,4 @@ jobs:
           who-to-greet: 'Shell trainees'
       
       - name: Show output
-        run: echo ${{ steps.custom-action.outputs.time }}
+        run: echo '${{ steps.custom-action.outputs.time }}'
