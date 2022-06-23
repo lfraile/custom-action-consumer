@@ -17,7 +17,7 @@ jobs:
         id: custom-action
         uses: lfraile-dotnet-2022-workshop/custom-action@v1.2
         with:
-          who-to-greet: 'Kipic trainees'
+          who-to-greet: 'DotNet 2022 Actions Workshop'
       
       - name: Show output
         run: echo '${{ steps.custom-action.outputs.time }}'
