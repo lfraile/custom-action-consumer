@@ -15,7 +15,7 @@ jobs:
       
       - name: Custom action
         id: custom-action
-        uses: lfraile-migration-accreditation/custom-action@v1.2
+        uses: lfraile-dotnet-2022-workshop/custom-action@v1.2
         with:
           who-to-greet: 'Kipic trainees'
       
