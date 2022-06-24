@@ -1,7 +1,7 @@
 name: Custom actions consumer
 on:
   push:
-    branches: [ main ]
+    branches: [ main, private-actions ]
   workflow_dispatch:
     
 jobs:  
