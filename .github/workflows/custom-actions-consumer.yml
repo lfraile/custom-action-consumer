@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Hello, world!
       
       - name: Get Token
         id: get_workflow_token
@@ -17,12 +20,15 @@ jobs:
           application_id: ${{ secrets.APP_ID }}
           application_private_key: ${{ secrets.APP_KEY }}
       
-      - name: Run a one-line script
-        run: echo Hello, world!
-      
+      - uses: actions/checkout@v3
+        with:
+          repository: lfraile-dotnet-2022-workshop/custom-action
+          token: ${{ steps.get_workflow_token.outputs.token }}
+          path: private-custom-action
+          
       - name: Custom action
         id: custom-action
-        uses: lfraile-dotnet-2022-workshop/custom-action@v1.2
+        uses: ./private-custom-action
         with:
           who-to-greet: 'DotNet 2022 Actions Workshop'
       
