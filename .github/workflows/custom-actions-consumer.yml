@@ -10,6 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
+      - name: Get Token
+        id: get_workflow_token
+        uses: peter-murray/workflow-application-token-action@v1
+        with:
+          application_id: ${{ secrets.APP_ID }}
+          application_private_key: ${{ secrets.APP_KEY }}
+      
       - name: Run a one-line script
         run: echo Hello, world!
       
